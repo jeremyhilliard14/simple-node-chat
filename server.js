@@ -1,6 +1,6 @@
 var http = require('http');
 var fs = require('fs');
-var port = process.env.PORT || '8000';
+var port = process.env.PORT || '8001';
 
 var server = http.createServer(function(request, response){
 	fs.readFile('index.html', 'UTF-8', function(error, data){
@@ -27,4 +27,4 @@ io.sockets.on('connect', function(socket){
 
 
 server.listen(port);
-console.log('Server listening on port 8000');
+console.log('Server listening on port 8001');
